@@ -17,3 +17,4 @@ parameters:
     app.googleplus_url: ~
     app.domain: ~
     app.analyticsid: ~
+    app.domain_year: "%domain.year%"

@@ -1,69 +1,53 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    {% include 'StefSimpleCmsBundle:Elements:metainfo.html.twig' %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <title>{{ page.title }}</title>
 
+    <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="/assets/css/main.css" rel="stylesheet">
-    <link href="/assets/css/overides.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/assets/js/hover.zoom.js"></script>
-    <script src="/assets/js/hover.zoom.conf.js"></script>
 
-    <!-- Owl Carousel Assets -->
-    <link href="/assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="/assets/css/owl.theme.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="assets/js/modernizr.js"></script>
 </head>
 
 <body>
 
-{% include 'StefGastouderMarjoleinBundle:Elements:navbar.html.twig' %}
+{% include 'StefaniusNationalHolidayBundle:Elements:navbar.html.twig' %}
+
+<div id="headerwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h1>{{ page.title }}</h1>
+                <h5>{{ page.description }}</h5>
+            </div>
+
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /headerwrap -->
 
 {% block htmlbody %}
 
 {% endblock %}
 
-{% include 'StefGastouderMarjoleinBundle:Elements:footer.html.twig' %}
-{% include 'StefGastouderMarjoleinBundle:Elements:js.html.twig' %}
-<script src="/assets/js/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function() {
 
-        $("#owl-demo").owlCarousel({
-
-            navigation : false, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 300,
-            singleItem:true,
-            autoPlay: 5000,
-            autoHeight : false,
-            transitionStyle: "fade",
-            dots: false,
-            pagination: false,
-            loop: true
-
-            // "singleItem:true" is a shortcut for:
-            // items : 1,
-            // itemsDesktop : false,
-            // itemsDesktopSmall : false,
-            // itemsTablet: false,
-            // itemsMobile : false
-
-        });
-
-    });
-</script>
+{% include 'StefaniusNationalHolidayBundle:Elements:footer.html.twig' %}
 </body>
 </html>

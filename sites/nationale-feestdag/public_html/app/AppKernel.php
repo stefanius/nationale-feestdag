@@ -18,19 +18,11 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
-            /*FrequenceWeb*/
-            new FrequenceWeb\Bundle\CalendRBundle\FrequenceWebCalendRBundle(), //Twig Calendar extensions
             /*Braincrafted */
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
             /* FOS*/
             new JMS\SerializerBundle\JMSSerializerBundle(),
-            /* Ivory */
-            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-            new Ivory\GoogleMapBundle\IvoryGoogleMapBundle(),
-            /* WhiteOctober */
-            new WhiteOctober\BreadcrumbsBundle\WhiteOctoberBreadcrumbsBundle(),
             /* Stefanius */
-            new Stef\RedirectTrailingSlashBundle\StefRedirectTrailingSlashBundle(),
           //  new Stef\GastouderMarjoleinBundle\StefGastouderMarjoleinBundle(),
             new Stefanius\NationalHolidayBundle\StefaniusNationalHolidayBundle(),
         );

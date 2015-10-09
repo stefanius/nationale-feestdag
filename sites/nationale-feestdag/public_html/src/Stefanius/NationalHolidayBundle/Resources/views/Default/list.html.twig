@@ -1,32 +1,39 @@
 {% extends "StefaniusNationalHolidayBundle::freelayout.html.twig" %}
 
-
 {% block htmlbody %}
 
     <div class="container mtb">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-1">
-                <h4>Een feest voor iedereen</h4>
-                <p>
-                    Het hele jaar door zijn er bijzondere dagen. Om in {{ domain_year }} echt goed te kunnen knallen, moet je zorgen dat je erbij bent. Schrijf daarom alle dagen die jij belangrijk vind op je agenda!
-                </p>
-            </div>
 
-            <div class="col-lg-3">
-                <h4>Wat zijn themadagen?</h4>
-                <p>
-                    Door de jaren heen zijn er verschillende nationale en internationale themadagen in het leven geroepen. Denk bijvoorbeeld aan <strong>dierendag</strong> of <strong>pannenkoekendag</strong>. Dit zijn vaak niet echt feestdagen maar vragen aandacht voor een bepaald probleem of roepen op tot nadenken.
-                </p>
-            </div>
+          {% include 'StefaniusNationalHolidayBundle:YearOverides:List/' ~ page.domainYear ~ '.html.twig' %}
 
-            <div class="col-lg-3">
-                <h4>Wat zijn feestdagen?</h4>
-                <p>
-                    De dagen die wij rekenen tot feestdagen zijn de dagen die nationaal erkend zijn. Denk daarbij aan kerst of pasen. Een aantal erkende feestdagen zijn ook nog eens goed voor een extra dagje vrij! Alle reden dus om dit goed bij te houden.
-                </p>
-            </div>
+        </div>
+    </div>
 
-        </div><! --/row -->
+    <div class="container mtb">
+        <div class="row">
+
+            <h2>Overzicht {{ page.domainYear }}</h2>
+            <table class="table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Omschrijving</th>
+                        <th>Datum</th>
+                    </tr>
+                </thead>
+
+                {% for date in dates %}
+                    <tr>
+                        {% if date.bankHoliday %}
+                            <td><strong>{{ date.description|e }} {{ date.startdate|date("Y") }}</strong></td>
+                        {% else %}
+                            <td>{{ date.description|e }} {{ date.startdate|date("Y") }}</td>
+                        {% endif %}
+                        <td>{{ date.startdate|date("d/m/Y") }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div> <! --/row -->
     </div><! --/container -->
 
 {% endblock %}

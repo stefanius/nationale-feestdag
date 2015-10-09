@@ -1,3 +1,7 @@
 stefanius_national_holiday_homepage:
-    path:     /hello/{name}
+    path:     /
     defaults: { _controller: StefaniusNationalHolidayBundle:Default:index }
+
+stefanius_national_holiday_list_all:
+    path:     /overzicht
+    defaults: { _controller: StefaniusNationalHolidayBundle:Default:list }
