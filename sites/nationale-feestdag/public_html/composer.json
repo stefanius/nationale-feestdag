@@ -1,8 +1,8 @@
 {
-    "name": "stef/brigittavalentijn",
+    "name": "stefanius/national-holiday",
     "license": "Not decided yet",
     "type": "project",
-    "description": "Website and CMS for the youth Scouting Brigitta / Valentijn - The Hague - Netherlands",
+    "description": "Website and CMS for displaying the dutch holidays.",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -41,19 +41,15 @@
         "jms/di-extra-bundle": "dev-master",
         "nelmio/alice": "v1.6.0",
         "symfony/filesystem": "2.5.3",
-        "egeloen/ckeditor-bundle": "~2.0",
-        "egeloen/google-map-bundle": "~2.2",
-        "frequence-web/calendr-bundle": "~1.0",
-        "whiteoctober/breadcrumbs-bundle": "~1.0",
-
-        "stef/crud-contract": "dev-master",
-        "stef/manipulation": "dev-master",
-        "stef/slug-manipulation": "dev-master",
-        "stef/key-value-manipulation": "dev-master",
-        "stef/redirect-trailing-slash-bundle": "dev-master"
-
+        "stef/special-dates": "dev-master"
     },
     "scripts": {
+        "pre-install-cmd": [
+          "export SYMFONY__DOMAIN__YEAR=2016"
+        ],
+        "pre-update-cmd": [
+          "export SYMFONY__DOMAIN__YEAR=2016"
+        ],
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
