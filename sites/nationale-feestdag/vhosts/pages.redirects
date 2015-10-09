@@ -1,0 +1,4 @@
+#Pages
+
+#misc
+rewrite ^/index.html / permanent;

@@ -1,0 +1,3 @@
+stefanius_national_holiday:
+    resource: "@StefaniusNationalHolidayBundle/Resources/config/routing.yml"
+    prefix:   /

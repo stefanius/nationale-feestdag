@@ -1,0 +1,50 @@
+server {
+    server_name  *.marjoleinvandeventer.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  marjoleinvandeventer.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+
+server {
+    server_name  *.gastouder-marjolein.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  *.gastoudermarjolein.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  *.oppasdestaart.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  *.gastouder-marjolein.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  oppasdestaart.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  gastouder-marjolein.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  gastouderdordrecht.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}
+
+server {
+    server_name  *.gastouderdordrecht.nl;
+    rewrite ^(.*) http://gastoudermarjolein.nl$1 permanent;
+}

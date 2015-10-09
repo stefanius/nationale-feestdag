@@ -1,0 +1,4 @@
+services:
+#    stefanius_national_holiday.example:
+#        class: Stefanius\NationalHolidayBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
