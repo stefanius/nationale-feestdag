@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b3450cfd64b88df00a7e402268ae86b",
-    "content-hash": "e2e3d916343f9b1d468962214201f2ba",
+    "hash": "c43e34de242f275db290fe467f106afb",
+    "content-hash": "9fbf44529316a61af6cc9a8ecd3a3f39",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2383,21 +2383,21 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v3.0.34",
+            "version": "v4.0.4",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "587f3cd08bf8856cfc888b255f34f18b85930657"
+                "reference": "cc0c9478da84f051da4465cf3a67f537ae758b13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/587f3cd08bf8856cfc888b255f34f18b85930657",
-                "reference": "587f3cd08bf8856cfc888b255f34f18b85930657",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/cc0c9478da84f051da4465cf3a67f537ae758b13",
+                "reference": "cc0c9478da84f051da4465cf3a67f537ae758b13",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3",
+                "php": ">=5.3.9",
                 "sensiolabs/security-checker": "~3.0",
                 "symfony/class-loader": "~2.2",
                 "symfony/framework-bundle": "~2.3",
@@ -2416,7 +2416,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "4.0.x-dev"
                 }
             },
             "autoload": {
@@ -2439,7 +2439,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-11-26 18:10:17"
+            "time": "2015-11-26 18:10:31"
         },
         {
             "name": "sensio/framework-extra-bundle",
