@@ -1,3 +1,0 @@
-[submodule "salt"]
-	path = salt
-	url = https://github.com/stefanius/saltbase
