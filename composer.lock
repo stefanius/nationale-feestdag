@@ -4,69 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61bdca5b77ea877299ccd81b88224aa7",
-    "content-hash": "42671f77bd07fe414409ca9f6a34e5e7",
+    "hash": "8b3450cfd64b88df00a7e402268ae86b",
+    "content-hash": "e2e3d916343f9b1d468962214201f2ba",
     "packages": [
-        {
-            "name": "braincrafted/bootstrap-bundle",
-            "version": "v2.1.2",
-            "target-dir": "Braincrafted/Bundle/BootstrapBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/braincrafted/bootstrap-bundle.git",
-                "reference": "c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b",
-                "reference": "c301bae8ba91b1a6f1045919b16f9cb9b62c7e7b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "symfony/console": "~2.3",
-                "symfony/finder": "~2.3",
-                "symfony/form": "~2.3",
-                "symfony/framework-bundle": "~2.3",
-                "symfony/twig-bundle": "~2.3"
-            },
-            "require-dev": {
-                "knplabs/knp-menu": "~2.0@alpha",
-                "knplabs/knp-menu-bundle": "~2.0@alpha",
-                "knplabs/knp-paginator-bundle": "dev-master",
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/assetic-bundle": "~2.3"
-            },
-            "suggest": {
-                "knplabs/knp-menu": "Required to use KnpMenuBundle.",
-                "knplabs/knp-menu-bundle": "BraincraftedBootstrapBundle styles the menus provided by KnpMenuBundle.",
-                "knplabs/knp-paginator-bundle": "BraincraftedBootstrapBundle styles the pagination provided by KnpPaginatorBundle.",
-                "twbs/bootstrap": "Twitter Bootstrap provides the assets (images, CSS and JS)"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Braincrafted\\Bundle\\BootstrapBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Florian Eckerstorfer",
-                    "email": "florian@eckerstorfer.co",
-                    "homepage": "http://florian.ec"
-                }
-            ],
-            "description": "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
-            "keywords": [
-                "bootstrap"
-            ],
-            "time": "2015-03-06 12:14:13"
-        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -870,58 +810,6 @@
             "time": "2014-09-09 13:34:57"
         },
         {
-            "name": "fzaninotto/faker",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/d0190b156bcca848d401fb80f31f504f37141c8d",
-                "reference": "d0190b156bcca848d401fb80f31f504f37141c8d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5"
-            },
-            "suggest": {
-                "ext-intl": "*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Faker\\": "src/Faker/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "François Zaninotto"
-                }
-            ],
-            "description": "Faker is a PHP library that generates fake data for you.",
-            "keywords": [
-                "data",
-                "faker",
-                "fixtures"
-            ],
-            "time": "2015-05-29 06:29:14"
-        },
-        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -1063,165 +951,6 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
-        },
-        {
-            "name": "jms/aop-bundle",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSAopBundle.git",
-                "reference": "78000d007e74283cc564a58e184d7f62548ad394"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSAopBundle/zipball/78000d007e74283cc564a58e184d7f62548ad394",
-                "reference": "78000d007e74283cc564a58e184d7f62548ad394",
-                "shasum": ""
-            },
-            "require": {
-                "jms/cg": "^1.1",
-                "php": ">=5.3.9",
-                "symfony/framework-bundle": "^2.3|^3.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "^2.7"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JMS\\AopBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Adds AOP capabilities to Symfony2",
-            "keywords": [
-                "annotations",
-                "aop"
-            ],
-            "time": "2015-12-09 16:30:46"
-        },
-        {
-            "name": "jms/cg",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/cg-library.git",
-                "reference": "0af1113c7409b8636c5244bbae10b2e0ff792e9c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/cg-library/zipball/0af1113c7409b8636c5244bbae10b2e0ff792e9c",
-                "reference": "0af1113c7409b8636c5244bbae10b2e0ff792e9c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "CG\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache2"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Toolset for generating PHP code",
-            "keywords": [
-                "code generation"
-            ],
-            "time": "2015-09-13 08:54:43"
-        },
-        {
-            "name": "jms/di-extra-bundle",
-            "version": "dev-master",
-            "target-dir": "JMS/DiExtraBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/JMSDiExtraBundle.git",
-                "reference": "e2181b81c9f8ecdc1538404bb192e442d7469b3d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSDiExtraBundle/zipball/e2181b81c9f8ecdc1538404bb192e442d7469b3d",
-                "reference": "e2181b81c9f8ecdc1538404bb192e442d7469b3d",
-                "shasum": ""
-            },
-            "require": {
-                "jms/aop-bundle": "^1.1.0",
-                "jms/metadata": "1.*",
-                "symfony/finder": "~2.1",
-                "symfony/framework-bundle": "~2.1",
-                "symfony/process": "~2.1"
-            },
-            "require-dev": {
-                "doctrine/doctrine-bundle": "*",
-                "doctrine/orm": "*",
-                "jms/security-extra-bundle": "1.*",
-                "phpcollection/phpcollection": ">=0.1,<0.3-dev",
-                "sensio/framework-extra-bundle": "*",
-                "symfony/browser-kit": "*",
-                "symfony/class-loader": "*",
-                "symfony/form": "*",
-                "symfony/security-bundle": "*",
-                "symfony/twig-bundle": "*",
-                "symfony/validator": "*",
-                "symfony/yaml": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "JMS\\DiExtraBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Allows to configure dependency injection using annotations",
-            "homepage": "http://jmsyst.com/bundles/JMSDiExtraBundle",
-            "keywords": [
-                "annotations",
-                "dependency injection"
-            ],
-            "time": "2015-09-14 14:15:40"
         },
         {
             "name": "jms/metadata",
@@ -1385,7 +1114,7 @@
         },
         {
             "name": "jms/serializer-bundle",
-            "version": "dev-master",
+            "version": "1.1.0",
             "target-dir": "JMS/SerializerBundle",
             "source": {
                 "type": "git",
@@ -1617,60 +1346,6 @@
                 "psr-3"
             ],
             "time": "2015-10-14 12:51:02"
-        },
-        {
-            "name": "nelmio/alice",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nelmio/alice.git",
-                "reference": "e225020d8e1f0ca867b4219698d6089b7a997761"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/e225020d8e1f0ca867b4219698d6089b7a997761",
-                "reference": "e225020d8e1f0ca867b4219698d6089b7a997761",
-                "shasum": ""
-            },
-            "require": {
-                "fzaninotto/faker": "~1.0",
-                "php": ">=5.3",
-                "symfony/yaml": "~2.0"
-            },
-            "require-dev": {
-                "doctrine/common": "~2.3",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/property-access": "~2.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Nelmio\\Alice\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nelmio",
-                    "homepage": "http://nelm.io"
-                }
-            ],
-            "description": "Expressive fixtures generator",
-            "keywords": [
-                "Fixture",
-                "data",
-                "orm",
-                "test"
-            ],
-            "time": "2014-02-05 22:35:38"
         },
         {
             "name": "paragonie/random_compat",
@@ -2708,26 +2383,40 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v2.3.22",
+            "version": "v3.0.34",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "98bdda791e7c2dfb5fd55781e69a4b00e4f751a6"
+                "reference": "587f3cd08bf8856cfc888b255f34f18b85930657"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/98bdda791e7c2dfb5fd55781e69a4b00e4f751a6",
-                "reference": "98bdda791e7c2dfb5fd55781e69a4b00e4f751a6",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/587f3cd08bf8856cfc888b255f34f18b85930657",
+                "reference": "587f3cd08bf8856cfc888b255f34f18b85930657",
                 "shasum": ""
             },
             "require": {
-                "symfony/framework-bundle": "~2.2"
+                "php": ">=5.3.3",
+                "sensiolabs/security-checker": "~3.0",
+                "symfony/class-loader": "~2.2",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/process": "~2.2"
+            },
+            "require-dev": {
+                "symfony/form": "~2.2",
+                "symfony/validator": "~2.2",
+                "symfony/yaml": "~2.2"
+            },
+            "suggest": {
+                "symfony/form": "If you want to use the configurator",
+                "symfony/validator": "If you want to use the configurator",
+                "symfony/yaml": "If you want to use  the configurator"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -2745,12 +2434,12 @@
                     "email": "fabien@symfony.com"
                 }
             ],
-            "description": "The base bundle for the Symfony Distributions",
+            "description": "Base bundle for Symfony Distributions",
             "keywords": [
                 "configuration",
                 "distribution"
             ],
-            "time": "2015-06-05 22:32:08"
+            "time": "2015-11-26 18:10:17"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2809,38 +2498,42 @@
         },
         {
             "name": "sensio/generator-bundle",
-            "version": "v2.5.3",
-            "target-dir": "Sensio/Bundle/GeneratorBundle",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "e50108c2133ee5c9c484555faed50c17a61221d3"
+                "reference": "e8d4db2fd6cd61e62208bda8f4f629e557f6acef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/e50108c2133ee5c9c484555faed50c17a61221d3",
-                "reference": "e50108c2133ee5c9c484555faed50c17a61221d3",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/e8d4db2fd6cd61e62208bda8f4f629e557f6acef",
+                "reference": "e8d4db2fd6cd61e62208bda8f4f629e557f6acef",
                 "shasum": ""
             },
             "require": {
-                "symfony/console": "~2.5",
-                "symfony/framework-bundle": "~2.2"
+                "symfony/console": "~2.7|~3.0",
+                "symfony/framework-bundle": "~2.7|~3.0",
+                "symfony/process": "~2.7|~3.0",
+                "symfony/yaml": "~2.7|~3.0"
             },
             "require-dev": {
-                "doctrine/orm": "~2.2,>=2.2.3",
-                "symfony/doctrine-bridge": "~2.2",
-                "twig/twig": "~1.11"
+                "doctrine/orm": "~2.4",
+                "symfony/doctrine-bridge": "~2.7|~3.0",
+                "twig/twig": "~1.18"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Sensio\\Bundle\\GeneratorBundle": ""
-                }
+                "psr-4": {
+                    "Sensio\\Bundle\\GeneratorBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2853,7 +2546,51 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2015-03-17 06:36:52"
+            "time": "2015-12-28 16:09:21"
+        },
+        {
+            "name": "sensiolabs/security-checker",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/security-checker.git",
+                "reference": "21696b0daa731064c23cfb694c60a2584a7b6e93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/21696b0daa731064c23cfb694c60a2584a7b6e93",
+                "reference": "21696b0daa731064c23cfb694c60a2584a7b6e93",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/console": "~2.0|~3.0"
+            },
+            "bin": [
+                "security-checker"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SensioLabs\\Security": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien.potencier@gmail.com"
+                }
+            ],
+            "description": "A security checker for your composer.lock",
+            "time": "2015-11-07 08:07:40"
         },
         {
             "name": "stef/special-dates",
@@ -2891,59 +2628,6 @@
             ],
             "description": "Library with special dates. Mainly for the Netherlands, but if you will you may use and extends it in foreign countries ;)",
             "time": "2015-09-16 08:25:22"
-        },
-        {
-            "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9.1,<0.9.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.4-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "lib/swift_required.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Corbyn"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.org",
-            "keywords": [
-                "email",
-                "mail",
-                "mailer"
-            ],
-            "time": "2015-06-06 14:19:39"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3014,53 +2698,6 @@
                 "minification"
             ],
             "time": "2015-11-17 09:45:47"
-        },
-        {
-            "name": "symfony/filesystem",
-            "version": "v2.5.3",
-            "target-dir": "Symfony/Component/Filesystem",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "c1309b0ee195ad264a4314435bdaecdfacb8ae9c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c1309b0ee195ad264a4314435bdaecdfacb8ae9c",
-                "reference": "c1309b0ee195ad264a4314435bdaecdfacb8ae9c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Filesystem\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Filesystem Component",
-            "homepage": "http://symfony.com",
-            "time": "2014-07-09 09:05:48"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -3578,63 +3215,6 @@
             "time": "2015-12-28 09:39:09"
         },
         {
-            "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.9",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/3d21ada19f23631f558ad6df653b168e35362e78",
-                "reference": "3d21ada19f23631f558ad6df653b168e35362e78",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "swiftmailer/swiftmailer": ">=4.2.0,~5.0",
-                "symfony/config": "~2.3|~3.0",
-                "symfony/dependency-injection": "~2.3|~3.0",
-                "symfony/http-kernel": "~2.3|~3.0",
-                "symfony/yaml": "~2.3|~3.0"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7|~3.0"
-            },
-            "suggest": {
-                "psr/log": "Allows logging"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bundle\\SwiftmailerBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony SwiftmailerBundle",
-            "homepage": "http://symfony.com",
-            "time": "2015-11-28 10:59:29"
-        },
-        {
             "name": "symfony/symfony",
             "version": "v2.8.1",
             "source": {
@@ -3928,8 +3508,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "doctrine/inflector": 20,
-        "jms/serializer-bundle": 20,
-        "jms/di-extra-bundle": 20,
         "stef/special-dates": 20
     },
     "prefer-stable": false,
