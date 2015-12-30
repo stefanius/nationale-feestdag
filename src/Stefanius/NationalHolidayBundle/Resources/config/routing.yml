@@ -5,3 +5,9 @@ stefanius_national_holiday_homepage:
 stefanius_national_holiday_list_all:
     path:     /overzicht
     defaults: { _controller: StefaniusNationalHolidayBundle:Default:list }
+
+stefanius_national_holiday_list:
+    path:     /{dutchMonthName}
+    defaults: { _controller: StefaniusNationalHolidayBundle:Default:month }
+    requirements:
+       dutchMonthName: januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december

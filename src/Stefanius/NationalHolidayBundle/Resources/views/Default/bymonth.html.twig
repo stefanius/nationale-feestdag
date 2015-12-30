@@ -1,0 +1,55 @@
+{% extends "StefaniusNationalHolidayBundle::freelayout.html.twig" %}
+
+{% block htmlbody %}
+
+    <div class="container mtb">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline list-unstyled">
+                    {% for month in months %}
+                        <li class="col-md-1"><a style="display: block;" href="/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+
+           {% include 'StefaniusNationalHolidayBundle:YearOverides:Month/overides.html.twig' %}
+
+           <p>De maand {{ dutchMonthName }} is de {{ monthNumber }}e maand van {{ page.domainYear }}. Deze maand behoort tot het {{ (monthNumber // 4) + 1 }}e kwartaal van {{ page.domainYear }}.</p>
+        </div>
+    </div>
+
+    <div class="container mtb">
+        <div class="row">
+
+            {% include 'StefaniusNationalHolidayBundle:GoogleAdsense:728x90.html.twig' with {'pubid': 'ca-pub-1143505562670221', 'slotid': '4350506819'} %}
+
+            <h2>Overzicht {{ dutchMonthName }} {{ page.domainYear }}</h2>
+            <table class="table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Omschrijving</th>
+                        <th>Datum</th>
+                    </tr>
+                </thead>
+
+                {% for date in dates %}
+                    <tr>
+                        {% if date.bankHoliday %}
+                            <td><strong>{{ date.description|e }} {{ date.startdate|date("Y") }}</strong></td>
+                        {% else %}
+                            <td>{{ date.description|e }} {{ date.startdate|date("Y") }}</td>
+                        {% endif %}
+                        <td>{{ date.startdate|date("d/m/Y") }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+            {% include 'StefaniusNationalHolidayBundle:GoogleAdsense:728x90.html.twig' with {'pubid': 'ca-pub-1143505562670221', 'slotid': '4350506819'} %}
+
+        </div> <! --/row -->
+    </div><! --/container -->
+
+{% endblock %}
