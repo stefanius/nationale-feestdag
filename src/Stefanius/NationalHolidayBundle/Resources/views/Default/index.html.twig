@@ -4,6 +4,16 @@
 
     <div class="container mtb">
         <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline list-unstyled">
+                    {% for month in months %}
+                        <li class="col-md-1"><a style="display: block;" href="/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-lg-4 col-lg-offset-1">
                 <h4>Een feest voor iedereen</h4>
                 <p>

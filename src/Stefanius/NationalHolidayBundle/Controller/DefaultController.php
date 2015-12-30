@@ -75,7 +75,8 @@ class DefaultController extends Controller
         ]);
 
         return $this->render('StefaniusNationalHolidayBundle:Default:index.html.twig', [
-            'page' => $page
+            'page'   => $page,
+            'months' => array_keys($this->months),
         ]);
     }
 
