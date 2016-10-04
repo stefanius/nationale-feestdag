@@ -3,7 +3,7 @@
 namespace Stefanius\NationalHolidayBundle\Controller;
 
 use Stefanius\NationalHolidayBundle\Model\Page;
-use Stef\SpecialDates\DateParser\Parser;
+use Stefanius\SpecialDates\DateParser\Parser;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 

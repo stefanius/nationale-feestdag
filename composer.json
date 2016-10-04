@@ -13,16 +13,15 @@
                 "name": "jquery/jquery",
                 "version": "1.10.2",
                 "dist": {
-                    "url": "http://code.jquery.com/jquery-1.10.2.js",
+                    "url": "https://code.jquery.com/jquery-1.10.2.js",
                     "type": "file"
                 }
             }
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.0",
         "symfony/symfony": "~2.8",
-        "phpunit/phpunit": "~4.1",
         "doctrine/inflector": "dev-master",
         "doctrine/doctrine-fixtures-bundle": "~2.2",
         "twig/extensions": "~1.0",
@@ -36,7 +35,11 @@
         "jquery/jquery":  "1.10.*",
         "jms/serializer-bundle": "~1.1",
         "symfony/filesystem": "~2.2",
-        "stef/special-dates": "dev-master"
+        "stefanius/special-dates": "dev-master"
+    },
+    "require-dev": {
+        "laravel/homestead": "^3.0",
+        "phpunit/phpunit": "~5.5"
     },
     "scripts": {
         "post-install-cmd": [
@@ -53,9 +56,6 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "symfony-app-dir": "app",

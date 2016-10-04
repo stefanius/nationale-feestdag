@@ -1,0 +1,42 @@
+---
+ip: "192.168.10.99"
+memory: 2048
+cpus: 1
+hostname: nationale-feestdag
+name: nationale-feestdag
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "/Users/sgrootveld/PhpstormProjects/nationale-feestdag"
+      to: "/home/vagrant/nationale-feestdag"
+
+sites:
+    - map: nationale-feestdagen-2016.dev
+      to: "/home/vagrant/nationale-feestdag/web"
+      type: symfony
+    - map: nationale-feestdagen-2017.dev
+      to: "/home/vagrant/nationale-feestdag/web"
+      type: symfony
+    - map: nationale-feestdag.dev
+      to: "/home/vagrant/nationale-feestdag/web"
+      type: symfony
+databases:
+    - homestead
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
