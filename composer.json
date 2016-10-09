@@ -40,7 +40,8 @@
         "jquery/jquery":  "1.10.*",
         "jms/serializer-bundle": "~1.1",
 
-        "stefanius/special-dates": "dev-master"
+        "stefanius/special-dates": "dev-master",
+        "nesbot/carbon": "^1.21"
     },
     "require-dev": {
         "laravel/homestead": "^3.0",
