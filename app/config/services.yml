@@ -1,0 +1,6 @@
+services:
+    app.twig_extension:
+        class: Stefanius\NationalHolidayBundle\Twig\CarbonExtension
+        public: false
+        tags:
+            - { name: twig.extension }

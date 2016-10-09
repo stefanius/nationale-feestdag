@@ -16,13 +16,7 @@
             {% include 'StefaniusNationalHolidayBundle:GoogleAdsense:728x90.html.twig' with {'pubid': 'ca-pub-1143505562670221', 'slotid': '4350506819'} %}
 
             <h2>Overzicht {{ page.domainYear }}</h2>
-            <table class="table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Omschrijving</th>
-                        <th>Datum</th>
-                    </tr>
-                </thead>
+            <table class="table table-striped table-hover">
 
                 {% for date in dates %}
                     <tr>
@@ -31,7 +25,10 @@
                         {% else %}
                             <td>{{ date.description|e }} {{ date.startdate|date("Y") }}</td>
                         {% endif %}
-                        <td>{{ date.startdate|date("d/m/Y") }}</td>
+
+                        <td>{{ date.startdate|localize('%A %d %B %Y')|capitalize }}</td>
+
+                        <td>Week {{ date.startdate|localize('%V') }}</td>
                     </tr>
                 {% endfor %}
             </table>
