@@ -2,6 +2,7 @@
 
 namespace Stefanius\NationalHolidayBundle\Controller;
 
+use Stefanius\NationalHolidayBundle\Model\Domain;
 use Stefanius\NationalHolidayBundle\Model\Page;
 use Stefanius\SpecialDates\DateParser\Parser;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -31,8 +32,17 @@ class DefaultController extends Controller
         $page = $this->setPageTitle($page, $data);
         $page = $this->setPageDescription($page, $data);
 
+        $domain = new Domain($data['request']);
+
         if (array_key_exists('request', $data)) {
-            $page->setDomainYear($this->getDomainYear($data['request']));
+
+            $page->setDomainYear($domain->pickYear());
+        }
+
+        if ($domain->hasYearSpecificDomain()) {
+            $page->setBrand("NATIONALE.FEESTDAGEN.{$domain->pickYear()}");
+        } else {
+            $page->setBrand("NATIONALE.FEESTDAG");
         }
 
         return $page;
@@ -56,17 +66,11 @@ class DefaultController extends Controller
         return $page;
     }
 
-    protected function getDomainYear(Request $request)
-    {
-        $splitTld = explode('.', $request->getHttpHost());
-        $splitOnDashes = explode('-', $splitTld[0]);
-
-        return (int) $splitOnDashes[2];
-    }
-
     public function indexAction(Request $request)
     {
-        $year = $this->getDomainYear($request);
+        $domain = new Domain($request);
+
+        $year = $domain->pickYear();
 
         $page = $this->buildPage([
             'title'       => 'Nationale Feestdagen ' . $year,
@@ -76,13 +80,16 @@ class DefaultController extends Controller
 
         return $this->render('StefaniusNationalHolidayBundle:Default:index.html.twig', [
             'page'   => $page,
+            'domain' => $domain,
             'months' => array_keys($this->months),
         ]);
     }
 
     public function listAction(Request $request)
     {
-        $year = $this->getDomainYear($request);
+        $domain = new Domain($request);
+
+        $year = $domain->pickYear();
 
         $parser = new Parser();
         $dates = $parser->getAllValidDates($year);
@@ -94,8 +101,9 @@ class DefaultController extends Controller
         ]);
 
         return $this->render('StefaniusNationalHolidayBundle:Default:list.html.twig', [
-            'dates' => $dates,
-            'page'  => $page,
+            'dates'  => $dates,
+            'page'   => $page,
+            'domain' => $domain,
         ]);
     }
 
@@ -105,7 +113,9 @@ class DefaultController extends Controller
             $this->redirect($this->generateUrl('stefanius_national_holiday_list_all'));
         }
 
-        $year = $this->getDomainYear($request);
+        $domain = new Domain($request);
+
+        $year = $domain->pickYear();
 
         $parser = new Parser();
         $dates = $parser->findSpecialDateByMonthNumber($year, $this->months[$dutchMonthName]);
@@ -119,6 +129,7 @@ class DefaultController extends Controller
         return $this->render('StefaniusNationalHolidayBundle:Default:bymonth.html.twig', [
             'dates'          => $dates,
             'page'           => $page,
+            'domain'         => $domain,
             'dutchMonthName' => $dutchMonthName,
             'monthNumber'    => $this->months[$dutchMonthName],
             'months'         => array_keys($this->months),
