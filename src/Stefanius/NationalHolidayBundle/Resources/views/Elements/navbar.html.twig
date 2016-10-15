@@ -8,11 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">NATIONALE.FEESTDAGEN.{{ page.domainyear }}</a>
+            <a class="navbar-brand" href="/">{{ page.brand }}</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="/overzicht">OVERZICHT BIJZONDERE DAGEN {{ page.domainyear }}</a></li>
+                {% if domain.hasYearSpecificDomain %}
+                    <li><a href="/overzicht">OVERZICHT BIJZONDERE DAGEN {{ page.domainyear }}</a></li>
+                {% endif %}
             </ul>
         </div><!--/.nav-collapse -->
     </div>

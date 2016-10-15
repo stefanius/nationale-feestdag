@@ -5,11 +5,13 @@
     <div class="container mtb">
         <div class="row">
             <div class="col-md-12">
-                <ul class="list-inline list-unstyled">
-                    {% for month in months %}
-                        <li class="col-md-1"><a style="display: block;" href="/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
-                    {% endfor %}
-                </ul>
+                {% if domain.hasYearSpecificDomain %}
+                    <ul class="list-inline list-unstyled">
+                        {% for month in months %}
+                            <li class="col-md-1"><a style="display: block;" href="/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
         </div>
 

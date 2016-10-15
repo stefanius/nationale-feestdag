@@ -10,6 +10,8 @@ class Page
 
     protected $domainYear;
 
+    protected $brand;
+
     /**
      * @return mixed
      */
@@ -56,5 +58,21 @@ class Page
     public function setDomainYear($domainYear)
     {
         $this->domainYear = $domainYear;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBrand()
+    {
+        return $this->brand;
+    }
+
+    /**
+     * @param mixed $brand
+     */
+    public function setBrand($brand)
+    {
+        $this->brand = $brand;
     }
 }
