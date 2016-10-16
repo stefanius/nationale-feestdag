@@ -1,10 +1,5 @@
 parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
-
-    app.version: 0.0.1
-    app.title: Nationale Feestdagen
-    app.cmstitle: Backoffice
-    app.http_entrypoint: ~
     app.twitter_name: ~
     app.twitter_url: ~
     app.facebook_url: ~
