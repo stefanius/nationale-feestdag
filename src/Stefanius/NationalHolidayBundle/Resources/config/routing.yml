@@ -2,6 +2,10 @@ stefanius_national_holiday_homepage:
     path:     /
     defaults: { _controller: StefaniusNationalHolidayBundle:Default:index }
 
+stefanius_national_sitemap:
+    path:     /sitemap.xml
+    defaults: { _controller: StefaniusNationalHolidayBundle:Sitemap:show }
+
 stefanius_national_holiday_list_all:
     path:     /overzicht
     defaults: { _controller: StefaniusNationalHolidayBundle:Default:list }
