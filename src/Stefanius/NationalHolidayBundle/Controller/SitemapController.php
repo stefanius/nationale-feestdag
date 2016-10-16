@@ -54,11 +54,13 @@ class SitemapController extends Controller
         $links = [];
 
         if (!$domain->hasYearSpecificDomain()) {
-            return [$request->getSchemeAndHttpHost()];
+            $links[$request->getSchemeAndHttpHost()] = $request->getSchemeAndHttpHost();
         }
 
-        foreach ($this->months as $key => $value) {
-            $links["{$request->getSchemeAndHttpHost()}/{$key}"] = "{$request->getHttpHost()}/{$key}";
+        if ($domain->hasYearSpecificDomain()) {
+            foreach ($this->months as $key => $value) {
+                $links["{$request->getSchemeAndHttpHost()}/{$key}"] = "{$request->getSchemeAndHttpHost()}/{$key}";
+            }
         }
 
         return $links;
