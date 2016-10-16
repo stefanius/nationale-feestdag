@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "636bbd4cb04c505bccedd45f580a2c15",
-    "content-hash": "66fe080b7854563fbadfdb3b136712dd",
+    "hash": "bc823c35f88b38b36433e4fed4c45c4f",
+    "content-hash": "7a303a7b92cdc6156484810c5576daa3",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1511,16 +1511,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "dev-master",
+            "version": "2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "f3ae7ece802c9a011b28fe08735cc1f96f5baef0"
+                "reference": "e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/f3ae7ece802c9a011b28fe08735cc1f96f5baef0",
-                "reference": "f3ae7ece802c9a011b28fe08735cc1f96f5baef0",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00",
+                "reference": "e7caf4936c7be82bc6d68df87f1d23a0d5bf6e00",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1567,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2016-10-03 09:13:09"
+            "time": "2016-04-13 16:21:01"
         },
         {
             "name": "symfony/polyfill-intl-icu",
@@ -3399,7 +3399,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "symfony/monolog-bundle": 20,
         "stefanius/special-dates": 20
     },
     "prefer-stable": false,
