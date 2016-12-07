@@ -3,24 +3,24 @@
 {% block htmlbody %}
 
     <div class="container mtb">
-
-        <div class="row">
-            <div class="col-md-12">
-                <p>In het {{ (monthNumber // 4) + 1 }}e kwartaal van {{ page.domainYear }} zit de maand {{ dutchMonthName }}. Elke maand en elk jaar heeft iets unieks te brengen, om te weten wat we allemaal in {{ dutchMonthName }} te vieren hebben, kijk dan gerust eens rond!</p>
-
-                <p>Mocht je het jaar {{ page.domainYear }} intussen wel gehad hebben, dan is wellicht <a href="/{{ page.domainYear -1 }}/{{ dutchMonthName }}" title="{{ dutchMonthName }} {{ page.domainYear -1 }}">{{ dutchMonthName }} {{ page.domainYear -1 }}</a> wellicht nog een leuke optie. Of spring gewoon door naar <a href="/{{ page.domainYear +2 }}/{{ dutchMonthName }}"> {{ page.domainYear +2 }}</a></p>
-            </div>
-        </div>
-
         <div class="row">
             <div class="col-md-12">
                 <ul class="list-inline list-unstyled">
                     {% for month in months %}
-                        <li class="col-md-1"><a style="display: block;" href="/{{ page.domainYear }}/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
+                        <li class="col-md-1"><a style="display: block;" href="/{{ month }}" title="{{ month }} {{ page.domainYear }}">{{ month }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+           {% include 'StefaniusNationalHolidayBundle:YearOverides:Month/overides.html.twig' %}
+
+           <p>De maand {{ dutchMonthName }} is de {{ monthNumber }}e maand van {{ page.domainYear }}. Deze maand behoort tot het {{ (monthNumber // 4) + 1 }}e kwartaal van {{ page.domainYear }}.</p>
+
+            </div>
+            </div>
     </div>
 
     <div class="container mtb">

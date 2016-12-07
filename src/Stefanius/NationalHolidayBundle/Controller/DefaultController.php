@@ -35,7 +35,6 @@ class DefaultController extends Controller
         $domain = new Domain($data['request']);
 
         if (array_key_exists('request', $data)) {
-
             $page->setDomainYear($domain->pickYear());
         }
 
@@ -73,16 +72,49 @@ class DefaultController extends Controller
         $year = $domain->pickYear();
 
         $page = $this->buildPage([
-            'title'       => 'Nationale Feestdagen ' . $year,
-            'description' => 'In ' . $year . ' zijn er weer genoeg dagen om bij stil te staan! Bekijk daarom hier alle Nederlandse feestdagen en themadagen voor het hele jaar ' . $year,
+            'title'       => $this->getIndexPageTitle($year),
+            'description' => $this->getIndexPageDescription($year),
             'request'     => $request,
         ]);
 
-        return $this->render('StefaniusNationalHolidayBundle:Default:index.html.twig', [
+        return $this->render($this->getIndexView($domain), [
             'page'   => $page,
             'domain' => $domain,
             'months' => array_keys($this->months),
         ]);
+    }
+
+    /**
+     * @param Domain $domain
+     *
+     * @return string
+     */
+    protected function getIndexView(Domain $domain)
+    {
+        if ($domain->hasYearSpecificDomain()) {
+            return 'StefaniusNationalHolidayBundle:YearDomain:index.html.twig';
+        }
+
+        return 'StefaniusNationalHolidayBundle:Default:index.html.twig';
+    }
+
+
+    protected function getIndexPageTitle($year)
+    {
+        if ($year > 0) {
+            return 'Nationale Feestdagen ' . $year;
+        }
+
+        return 'Nederlandse Feestdagen';
+    }
+
+    protected function getIndexPageDescription($year)
+    {
+        if ($year > 0) {
+            return 'In ' . $year . ' zijn er weer genoeg dagen om bij stil te staan! Bekijk daarom hier alle Nederlandse feestdagen en themadagen voor het hele jaar ' . $year;
+        }
+
+        return 'Nederlandse Feestdagen';
     }
 
     public function listAction(Request $request)
@@ -125,6 +157,39 @@ class DefaultController extends Controller
             'description' => ucfirst($dutchMonthName) . ' ' . $year . ' heeft maar liefst ' . count($dates) . ' dagen om bij stil te staan. Bekijk het hele overzicht van ' . $dutchMonthName,
             'request'     => $request,
         ]);
+
+        return $this->render('StefaniusNationalHolidayBundle:YearDomain:bymonth.html.twig', [
+            'dates'          => $dates,
+            'page'           => $page,
+            'domain'         => $domain,
+            'dutchMonthName' => $dutchMonthName,
+            'monthNumber'    => $this->months[$dutchMonthName],
+            'months'         => array_keys($this->months),
+        ]);
+    }
+
+    public function monthWithoutDomainYearAction(Request $request, $year, $dutchMonthName)
+    {
+        if (!array_key_exists($dutchMonthName, $this->months)) {
+            $this->redirect('/');
+        }
+
+        if (strlen($year) !== 4 || $year < 1500 || !is_numeric($year)) {
+            $this->redirect('/');
+        }
+
+        $domain = new Domain($request);
+
+        $parser = new Parser();
+        $dates = $parser->findSpecialDateByMonthNumber($year, $this->months[$dutchMonthName]);
+
+        $page = $this->buildPage([
+            'title'       => 'Feestelijke dagen in ' . $year . ' - ' . $dutchMonthName,
+            'description' => $year . ' - ' . ucfirst($dutchMonthName) . ' bevat ' . count($dates) . ' bijzondere dagen! Naast ' . $dutchMonthName . ' hebben we ook de andere maanden in kaart gebracht voor ' . $year,
+            'request'     => $request,
+        ]);
+
+        $page->setDomainYear($year);
 
         return $this->render('StefaniusNationalHolidayBundle:Default:bymonth.html.twig', [
             'dates'          => $dates,
