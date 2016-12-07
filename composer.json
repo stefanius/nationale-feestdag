@@ -38,7 +38,7 @@
         "jquery/jquery":  "1.10.*",
         "jms/serializer-bundle": "~1.1",
 
-        "stefanius/special-dates": "dev-master",
+        "stefanius/special-dates": "~1.0",
         "nesbot/carbon": "^1.21"
     },
     "require-dev": {
