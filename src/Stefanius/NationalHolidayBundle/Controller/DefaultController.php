@@ -142,7 +142,7 @@ class DefaultController extends Controller
     public function monthAction(Request $request, $dutchMonthName)
     {
         if (!array_key_exists($dutchMonthName, $this->months)) {
-            $this->redirect($this->generateUrl('stefanius_national_holiday_list_all'));
+            return $this->redirect($this->generateUrl('stefanius_national_holiday_list_all'));
         }
 
         $domain = new Domain($request);
@@ -171,11 +171,11 @@ class DefaultController extends Controller
     public function monthWithoutDomainYearAction(Request $request, $year, $dutchMonthName)
     {
         if (!array_key_exists($dutchMonthName, $this->months)) {
-            $this->redirect('/');
+            return $this->redirect('/');
         }
 
         if (strlen($year) !== 4 || $year < 1500 || !is_numeric($year)) {
-            $this->redirect('/');
+            return $this->redirect('/');
         }
 
         $domain = new Domain($request);
